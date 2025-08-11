@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic meta tags for a good user experience on any device. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jurassic Park Dinosaurs</title>
+  <!-- We'll use Tailwind CSS for all the styling. -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* We'll use the 'Inter' font for a clean look, but you can change it! */
     body {
       font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
 <body class="bg-gray-800 text-gray-100 font-sans">
+
+  <!-- Main container with a dark theme and some padding. -->
   <div class="container mx-auto p-4 md:p-8">
+
+    <!-- Navigation Bar -->
     <nav class="bg-gray-900 rounded-full shadow-lg p-3 flex justify-center space-x-6 md:space-x-12 mb-8">
       <a href="index.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Home</a>
       <a href="movies.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Movies</a>
@@ -20,72 +27,561 @@
     </nav>
     
     <!-- Dinosaurs Section -->
-    <section id="dinos" class="bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 space-y-6">
-      <h2 class="text-4xl font-bold text-green-500 text-center">A Dinosaur Guide</h2>
+    <section id="dinosaurs" class="bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 space-y-8">
+      <h2 class="text-4xl md:text-5xl font-bold text-green-500 text-center">The Prehistoric Creatures of Jurassic Park</h2>
+      <p class="text-lg text-gray-300 text-center max-w-2xl mx-auto">
+        Here is a complete list of the amazing prehistoric animals that have appeared throughout the Jurassic franchise.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="flex justify-center">
+        <input 
+          id="dino-search" 
+          type="text" 
+          placeholder="Search for a creature..."
+          class="w-full max-w-md p-3 rounded-full bg-gray-700 text-gray-100 border-2 border-gray-600 focus:outline-none focus:border-green-500 transition-colors duration-300 placeholder-gray-400"
+        >
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Original Dinosaurs -->
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Tyrannosaurus Rex</h3>
-          <p class="mt-2 text-gray-300">One of the largest and most famous carnivores. Known for its powerful roar and massive size, it's the undisputed king of Jurassic Park!</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Velociraptor</h3>
-          <p class="mt-2 text-gray-300">A very intelligent and agile predator that hunts in packs. They are smaller than a T-Rex but much smarter and faster.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Triceratops</h3>
-          <p class="mt-2 text-gray-300">A large, plant-eating dinosaur with a giant frill and three horns on its face. It's a gentle giant of the park.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Brachiosaurus</h3>
-          <p class="mt-2 text-gray-300">A massive herbivore known for its incredibly long neck, which it used to reach leaves high up in trees. It's one of the most peaceful dinosaurs.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Pteranodon</h3>
-          <p class="mt-2 text-gray-300">A flying reptile with a long, crested head and a large beak. While not a true dinosaur, it was a memorable resident of the aviary.</p>
-        </div>
-        <!-- 10 New Dinosaurs -->
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Ankylosaurus</h3>
-          <p class="mt-2 text-gray-300">A dinosaur known for its incredible defense. It had a bony, club-like tail and armor plates covering its body, protecting it from predators.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Spinosaurus</h3>
-          <p class="mt-2 text-gray-300">An enormous carnivore that was even larger than the T-Rex. It had a huge sail on its back and was known to be a powerful swimmer.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Dilophosaurus</h3>
-          <p class="mt-2 text-gray-300">A venomous carnivore that could spit at its prey. It was known for the frill around its neck and the two bony crests on its head.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Gallimimus</h3>
-          <p class="mt-2 text-gray-300">A fast and agile dinosaur that looked similar to an ostrich. They were known for running in large flocks and being difficult to catch.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Stegosaurus</h3>
-          <p class="mt-2 text-gray-300">A famous herbivore with large, bony plates on its back and a spiked tail for defense. It was a gentle but powerful dinosaur.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Compsognathus</h3>
-          <p class="mt-2 text-gray-300">A tiny, turkey-sized carnivore that hunted in huge packs. Despite their small size, they were a dangerous threat in groups.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Mosasaurus</h3>
-          <p class="mt-2 text-gray-300">A massive marine reptile that lived in the park's lagoon. It was the top predator of the sea, known for its powerful jaws and huge size.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold text-yellow-400">Indominus Rex</h3>
-          <p class="mt-2 text-gray-300">A large, genetically engineered hybrid dinosaur created by InGen. It was known for its high intelligence and camouflaging abilities.</p>
-        </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+        
+        <!-- Allosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
           <h3 class="text-2xl font-semibold text-yellow-400">Allosaurus</h3>
-          <p class="mt-2 text-gray-300">A ferocious carnivore with powerful legs and sharp claws. It was a major predator in its time, known for its small horns above its eyes.</p>
+          <p class="mt-2 text-gray-300">
+            A large theropod dinosaur, known for its powerful jaws and distinctive bony crests above its eyes.
+          </p>
         </div>
-        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+
+        <!-- Ankylosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Ankylosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            Often called a "living tank," this dinosaur is covered in bony armor and has a massive club at the end of its tail.
+          </p>
+        </div>
+
+        <!-- Anurognathus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Anurognathus (pterosaur)</h3>
+          <p class="mt-2 text-gray-300">
+            A small, insect-eating flying reptile with a very short tail.
+          </p>
+        </div>
+
+        <!-- Apatosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Apatosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A gigantic, long-necked sauropod, often confused with the Brachiosaurus. They are massive, peaceful plant-eaters.
+          </p>
+        </div>
+
+        <!-- Aquilops -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Aquilops</h3>
+          <p class="mt-2 text-gray-300">
+            A small, horned dinosaur, notable for being one of the earliest known ceratopsians.
+          </p>
+        </div>
+        
+        <!-- Atrociraptor -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Atrociraptor</h3>
+          <p class="mt-2 text-gray-300">
+            A fierce and aggressive raptor that is known for its incredible speed and relentless hunting.
+          </p>
+        </div>
+
+        <!-- Baryonyx -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Baryonyx</h3>
+          <p class="mt-2 text-gray-300">
+            A piscivorous (fish-eating) dinosaur with a crocodile-like snout and a large claw on its thumb.
+          </p>
+        </div>
+        
+        <!-- Becklespinax -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Becklespinax</h3>
+          <p class="mt-2 text-gray-300">
+            A large theropod dinosaur, noted for its tall spines on the vertebrae.
+          </p>
+        </div>
+        
+        <!-- Brachiosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Brachiosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A massive, long-necked herbivore. The Brachiosaurus is one of the first dinosaurs seen in the park and is known for its peaceful nature.
+          </p>
+        </div>
+
+        <!-- Carnotaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
           <h3 class="text-2xl font-semibold text-yellow-400">Carnotaurus</h3>
-          <p class="mt-2 text-gray-300">A unique carnivore with two small horns above its eyes and incredibly small arms. It was known for its speed and powerful bite.</p>
+          <p class="mt-2 text-gray-300">
+            A fast, powerful predator with two distinctive horns above its eyes. It's a quick and aggressive hunter.
+          </p>
         </div>
+
+        <!-- Ceratosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Ceratosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A carnivorous theropod known for the horn on its snout. It's an aggressive but smaller predator.
+          </p>
+        </div>
+
+        <!-- Compsognathus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Compsognathus</h3>
+          <p class="mt-2 text-gray-300">
+            Small, fast, and social carnivores that hunt in large packs. They are known for being cunning and dangerous in groups.
+          </p>
+        </div>
+
+        <!-- Corythosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Corythosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A duck-billed dinosaur with a tall, helmet-like crest on its head, which it may have used for making loud sounds.
+          </p>
+        </div>
+
+        <!-- Dilophosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Dilophosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            Recognizable by the frill around its neck and its ability to spit venom. It's a smaller predator but still very dangerous.
+          </p>
+        </div>
+
+        <!-- Dimetrodon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Dimetrodon (synapsid)</h3>
+          <p class="mt-2 text-gray-300">
+            A prehistoric reptile-like creature with a large sail on its back, famous for being a powerful carnivore.
+          </p>
+        </div>
+
+        <!-- Dimorphodon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Dimorphodon (pterosaur)</h3>
+          <p class="mt-2 text-gray-300">
+            A small pterosaur with a large head, a short neck, and two different types of teeth. It's often found flying in flocks.
+          </p>
+        </div>
+
+        <!-- Distortus rex -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Distortus rex</h3>
+          <p class="mt-2 text-gray-300">
+            A deadly hybrid dinosaur, the result of genetic engineering, known for its extreme aggression.
+          </p>
+        </div>
+
+        <!-- Dreadnoughtus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Dreadnoughtus</h3>
+          <p class="mt-2 text-gray-300">
+            An immense, long-necked sauropod, one of the largest land animals ever discovered.
+          </p>
+        </div>
+
+        <!-- Dunkleosteus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Dunkleosteus (fish)</h3>
+          <p class="mt-2 text-gray-300">
+            An ancient armored fish with powerful jaws and a huge size, living in prehistoric oceans.
+          </p>
+        </div>
+
+        <!-- Gallimimus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Gallimimus</h3>
+          <p class="mt-2 text-gray-300">
+            A fast-running herbivore that looks a bit like an ostrich. They are known for their speed and herd behavior.
+          </p>
+        </div>
+
+        <!-- Giant Lamprey -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Giant Lamprey (fish)</h3>
+          <p class="mt-2 text-gray-300">
+            A large, parasitic prehistoric fish with a circular mouth full of teeth.
+          </p>
+        </div>
+
+        <!-- Giant Locust -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Giant Locust (insect)</h3>
+          <p class="mt-2 text-gray-300">
+            Genetically modified, oversized locusts that cause global crop destruction.
+          </p>
+        </div>
+
+        <!-- Giganotosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Giganotosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            One of the largest land carnivores, this dinosaur rivals the T. rex in size and is a top predator.
+          </p>
+        </div>
+
+        <!-- Iguanodon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Iguanodon</h3>
+          <p class="mt-2 text-gray-300">
+            A large, herbivorous dinosaur known for its distinctive thumb spikes, which it used for defense.
+          </p>
+        </div>
+        
+        <!-- Indominus rex -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Indominus rex</h3>
+          <p class="mt-2 text-gray-300">
+            A genetically engineered hybrid dinosaur with a mix of different dinosaur traits. It's bigger, smarter, and more ferocious than a T. rex.
+          </p>
+        </div>
+
+        <!-- Indoraptor -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Indoraptor</h3>
+          <p class="mt-2 text-gray-300">
+            A deadly hybrid dinosaur, a smaller but smarter version of the Indominus Rex. It's a master of stealth and can hunt its prey with a single command.
+          </p>
+        </div>
+
+        <!-- Kentrosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Kentrosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A dinosaur with plates on its back and long, menacing spikes on its tail and shoulders, used for defense.
+          </p>
+        </div>
+
+        <!-- Lystrosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Lystrosaurus (therapsid)</h3>
+          <p class="mt-2 text-gray-300">
+            A mammal-like reptile that lived before the dinosaurs, known for its small size and two tusks.
+          </p>
+        </div>
+
+        <!-- Majungasaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Majungasaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A theropod dinosaur from Madagascar, known for its single horn on its head and aggressive nature.
+          </p>
+        </div>
+
+        <!-- Mamenchisaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Mamenchisaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A huge, long-necked sauropod, famous for having one of the longest necks of any dinosaur.
+          </p>
+        </div>
+
+        <!-- Microceratus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Microceratus</h3>
+          <p class="mt-2 text-gray-300">
+            A small ceratopsian dinosaur, known for its small size and frill. It's one of the tiniest horned dinosaurs.
+          </p>
+        </div>
+
+        <!-- Monolophosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Monolophosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A medium-sized theropod known for a single, distinctive crest on its snout.
+          </p>
+        </div>
+
+        <!-- Moros -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Moros</h3>
+          <p class="mt-2 text-gray-300">
+            A small tyrannosauroid dinosaur, thought to be a distant ancestor of the T. rex.
+          </p>
+        </div>
+        
+        <!-- Mosasaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Mosasaurus (mosasaur)</h3>
+          <p class="mt-2 text-gray-300">
+            An enormous marine reptile that lives in the Jurassic World lagoon. It's a huge carnivore that eats sharks and other creatures.
+          </p>
+        </div>
+
+        <!-- Mutadon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Mutadon</h3>
+          <p class="mt-2 text-gray-300">
+            A genetically engineered dinosaur with a mix of different dinosaur traits. It's a powerful and dangerous hybrid.
+          </p>
+        </div>
+
+        <!-- Nasutoceratops -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Nasutoceratops</h3>
+          <p class="mt-2 text-gray-300">
+            A large, herbivorous dinosaur with a pair of long, curved horns over its face, similar to a bull.
+          </p>
+        </div>
+
+        <!-- Nothosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Nothosaurus (nothosaur)</h3>
+          <p class="mt-2 text-gray-300">
+            A semi-aquatic reptile with a long body and a powerful tail, living in prehistoric seas.
+          </p>
+        </div>
+
+        <!-- Ouranosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Ouranosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A herbivorous dinosaur with a large sail on its back, a duck-like beak, and thumb spikes.
+          </p>
+        </div>
+
+        <!-- Oviraptor -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Oviraptor</h3>
+          <p class="mt-2 text-gray-300">
+            A small, feathered dinosaur with a parrot-like beak, often shown as a clever and mischievous creature.
+          </p>
+        </div>
+
+        <!-- Pachycephalosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Pachycephalosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            Known for its thick, domed skull, which it may have used for head-butting rivals or as a defense.
+          </p>
+        </div>
+
+        <!-- Pachyrhinosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Pachyrhinosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A large ceratopsian dinosaur with a bony boss over its nose instead of a horn, as well as a large neck frill.
+          </p>
+        </div>
+
+        <!-- Parasaurolophus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Parasaurolophus</h3>
+          <p class="mt-2 text-gray-300">
+            A large, herbivorous dinosaur with a distinctive, curved crest on its head that it may have used for communication.
+          </p>
+        </div>
+
+        <!-- Pteranodon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Pteranodon (pterosaur)</h3>
+          <p class="mt-2 text-gray-300">
+            A flying reptile with a long crest on its head. Pteranodons live in giant aviaries and can be very aggressive.
+          </p>
+        </div>
+
+        <!-- Pyroraptor -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Pyroraptor</h3>
+          <p class="mt-2 text-gray-300">
+            A small, feathered, and highly agile raptor known for its intelligence and speed.
+          </p>
+        </div>
+
+        <!-- Quetzalcoatlus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Quetzalcoatlus (pterosaur)</h3>
+          <p class="mt-2 text-gray-300">
+            One of the largest flying animals ever, this gigantic pterosaur soars through the skies and is a powerful predator.
+          </p>
+        </div>
+
+        <!-- Scorpios rex -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Scorpios rex</h3>
+          <p class="mt-2 text-gray-300">
+            A ferocious and unstable hybrid dinosaur, known for its poisonous quills and unpredictable behavior.
+          </p>
+        </div>
+
+        <!-- Sinoceratops -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Sinoceratops</h3>
+          <p class="mt-2 text-gray-300">
+            A large, horned dinosaur with a distinctive curved frill. It's a peaceful herbivore and is often seen in herds.
+          </p>
+        </div>
+        
+        <!-- Smilodon -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Smilodon (mammal)</h3>
+          <p class="mt-2 text-gray-300">
+            A saber-toothed cat, a powerful prehistoric mammal with massive fangs.
+          </p>
+        </div>
+        
+        <!-- Spinoceratops -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Spinoceratops</h3>
+          <p class="mt-2 text-gray-300">
+            A hybrid dinosaur combining the traits of Spinosaurus and Sinoceratops, creating a deadly and unique predator.
+          </p>
+        </div>
+
+        <!-- Spinosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Spinosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            Known for the huge sail on its back, this dinosaur is even larger than the T. rex and is a skilled hunter in both water and on land.
+          </p>
+        </div>
+
+        <!-- Stegosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Stegosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A large, plant-eating dinosaur with bony plates along its back and a spiked tail for defense.
+          </p>
+        </div>
+
+        <!-- Stygimoloch -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Stygimoloch</h3>
+          <p class="mt-2 text-gray-300">
+            A smaller dinosaur with horns and a spiky skull, sometimes debated by scientists as being a younger form of Pachycephalosaurus.
+          </p>
+        </div>
+
+        <!-- Suchomimus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Suchomimus</h3>
+          <p class="mt-2 text-gray-300">
+            A large, fish-eating dinosaur with a long, narrow snout and a low sail on its back.
+          </p>
+        </div>
+
+        <!-- Tarbosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Tarbosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A large, carnivorous dinosaur from Asia, closely related to the Tyrannosaurus rex.
+          </p>
+        </div>
+
+        <!-- Therizinosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Therizinosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A large, herbivorous dinosaur with incredibly long claws on its hands.
+          </p>
+        </div>
+
+        <!-- Titanosaurus -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Titanosaurus</h3>
+          <p class="mt-2 text-gray-300">
+            A group of large, long-necked sauropods known for their wide distribution around the world.
+          </p>
+        </div>
+
+        <!-- Triceratops -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Triceratops</h3>
+          <p class="mt-2 text-gray-300">
+            A large, herbivorous dinosaur with three horns on its face. It's gentle unless provoked, and a favorite of many park visitors.
+          </p>
+        </div>
+        
+        <!-- Tyrannosaurus rex -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Tyrannosaurus rex</h3>
+          <p class="mt-2 text-gray-300">
+            One of the largest and most powerful carnivores, the T. rex is the star of the show. Famous for its massive size and iconic roar.
+          </p>
+        </div>
+        
+        <!-- Unidentified Dinosaur Fetuses -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Unidentified Dinosaur Fetuses</h3>
+          <p class="mt-2 text-gray-300">
+            The unhatched dinosaur eggs and embryos that are often seen in the park's labs and hatcheries.
+          </p>
+        </div>
+        
+        <!-- Unnamed Large Amphibian -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Unnamed Large Amphibian (amphibian)</h3>
+          <p class="mt-2 text-gray-300">
+            A large, unknown prehistoric amphibian seen in the animated series.
+          </p>
+        </div>
+        
+        <!-- Unnamed Eel/Snake -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Unnamed Eel/Snake (fish/snake)</h3>
+          <p class="mt-2 text-gray-300">
+            A mysterious, eel-like or snake-like aquatic creature featured in the series.
+          </p>
+        </div>
+        
+        <!-- Unnamed Ornithopod Carcass -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Unnamed Ornithopod Carcass</h3>
+          <p class="mt-2 text-gray-300">
+            The remains of an unknown herbivorous dinosaur, a clue to what roams the island.
+          </p>
+        </div>
+
+        <!-- Velociraptor -->
+        <div class="dino-card bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Velociraptor</h3>
+          <p class="mt-2 text-gray-300">
+            Highly intelligent and social pack hunters, the raptors are known for their clever tactics and sharp claws.
+          </p>
+        </div>
+
       </div>
     </section>
+
   </div>
+
+  <script>
+    // This script handles the search functionality.
+    
+    // This function runs every time the user types a letter in the search box.
+    function handleSearch() {
+      // Get the text the user has typed and convert it to lowercase.
+      const searchText = document.getElementById('dino-search').value.toLowerCase();
+      // Get all the dinosaur cards on the page.
+      const dinoCards = document.querySelectorAll('.dino-card');
+
+      // Loop through each dinosaur card.
+      dinoCards.forEach(card => {
+        // Get the dinosaur's name (the text inside the h3 tag).
+        const dinoName = card.querySelector('h3').textContent.toLowerCase();
+
+        // Check if the dinosaur's name includes the search text.
+        if (dinoName.includes(searchText)) {
+          // If it matches, show the card.
+          card.style.display = ''; // The default display value.
+        } else {
+          // If it doesn't match, hide the card.
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Add an event listener to the search bar to call the handleSearch function on every keypress.
+    document.getElementById('dino-search').addEventListener('input', handleSearch);
+  </script>
 </body>
+</html>
