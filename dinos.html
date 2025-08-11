@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurassic Park Dinosaurs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-800 text-gray-100 font-sans">
+  <div class="container mx-auto p-4 md:p-8">
+    <nav class="bg-gray-900 rounded-full shadow-lg p-3 flex justify-center space-x-6 md:space-x-12 mb-8">
+      <a href="index.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Home</a>
+      <a href="movies.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Movies</a>
+      <a href="dinos.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Dinosaurs</a>
+    </nav>
+    
+    <!-- Dinosaurs Section -->
+    <section id="dinos" class="bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 space-y-6">
+      <h2 class="text-4xl font-bold text-green-500 text-center">A Dinosaur Guide</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- T-Rex -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Tyrannosaurus Rex</h3>
+          <p class="mt-2 text-gray-300">One of the largest and most famous carnivores. Known for its powerful roar and massive size, it's the undisputed king of Jurassic Park!</p>
+        </div>
+        <!-- Velociraptor -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Velociraptor</h3>
+          <p class="mt-2 text-gray-300">A very intelligent and agile predator that hunts in packs. They are smaller than a T-Rex but much smarter and faster.</p>
+        </div>
+        <!-- Triceratops -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Triceratops</h3>
+          <p class="mt-2 text-gray-300">A large, plant-eating dinosaur with a giant frill and three horns on its face. It's a gentle giant of the park.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

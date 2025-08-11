@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurassic Park Movies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-800 text-gray-100 font-sans">
+  <div class="container mx-auto p-4 md:p-8">
+    <nav class="bg-gray-900 rounded-full shadow-lg p-3 flex justify-center space-x-6 md:space-x-12 mb-8">
+      <a href="index.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Home</a>
+      <a href="movies.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Movies</a>
+      <a href="dinos.html" class="text-white hover:text-yellow-400 font-bold text-lg md:text-xl transition-colors duration-300">Dinosaurs</a>
+    </nav>
+    
+    <!-- Movies Section -->
+    <section id="movies" class="bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 mb-8 space-y-6">
+      <h2 class="text-4xl font-bold text-green-500 text-center">The Movies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Jurassic Park 1993 -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Jurassic Park (1993)</h3>
+          <p class="mt-2 text-gray-300">The first film that started it all! Scientists are invited to a new theme park on a remote island, but chaos erupts when the cloned dinosaurs escape.</p>
+        </div>
+        <!-- The Lost World -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">The Lost World (1997)</h3>
+          <p class="mt-2 text-gray-300">Four years after the disaster, a new team travels to a second island where the dinosaurs are thriving on their own, but they face a new danger.</p>
+        </div>
+        <!-- Jurassic Park III -->
+        <div class="bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-2xl transition-shadow duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-400">Jurassic Park III (2001)</h3>
+          <p class="mt-2 text-gray-300">A new adventure on the second island with bigger and smarter dinosaurs. This time, the team is searching for a lost boy.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
